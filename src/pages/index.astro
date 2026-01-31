@@ -2,18 +2,73 @@
 import Layout from '../layouts/Layout.astro';
 import Markdown from '../components/Markdown.astro';
 
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
+const intro = `
+Hi, I’m **JPVED**.
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
+I help teams turn complex work into clear, executable outcomes — combining **business analysis, documentation, and automation** to improve how systems and operations run.
+
+**What you’ll get working with me**
+- Clear requirements + process maps
+- Strong documentation that stakeholders actually use
+- Practical automation and reporting improvements
+- A calm, structured approach to delivery
+`;
+
+const services = `
+### Services
+- **Business & Systems Analysis** (requirements, user stories, process design)
+- **Billing / Data / Integrations** (workflows, reporting, operational improvements)
+- **Automation + AI enablement** (streamlined ops, smarter workflows)
+- **Delivery support** (backlog grooming, stakeholder alignment, testing support)
+`;
+
+const contact = `
+### Contact
+Email: **you@jpved.com**  
+LinkedIn: **https://www.linkedin.com/in/YOUR-LINK/**
+
+If you send a message, include:
+- what you’re building
+- where you’re stuck
+- your target timeline
 `;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
+<Layout title="JPVED | Jalpesh Patel">
+  <section class="mb-12">
+    <h1 class="mb-3">JPVED</h1>
+    <p class="text-lg opacity-90">
+      Practical systems, documentation, and automation that help teams deliver.
     </p>
+
+    <div class="mt-6 flex gap-3 flex-wrap">
+      <a href="#contact" class="btn btn-lg sm:min-w-64">Contact</a>
+      <a href="#services" class="btn btn-lg sm:min-w-64">What I do</a>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <Markdown content={intro} class="text-lg" />
+  </section>
+
+  <section id="services" class="mb-12">
+    <Markdown content={services} class="text-lg" />
+  </section>
+
+  <section class="mb-12">
+    <h2 class="mb-3">Recent focus</h2>
+    <ul>
+      <li>Modernizing legacy-to-new billing and statement workflows</li>
+      <li>Clarifying requirements across business + engineering stakeholders</li>
+      <li>Reducing manual work through automation and cleaner reporting</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="mb-12">
+    <Markdown content={contact} class="text-lg" />
+  </section>
+
+  <footer class="opacity-70">
+    <small>© {new Date().getFullYear()} JPVED. All rights reserved.</small>
+  </footer>
 </Layout>
