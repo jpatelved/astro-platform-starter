@@ -2,8 +2,34 @@
 
 ---
 
-<footer class="pt-16 pb-12 sm:pt-24 sm:pb-16">
-    <p class="text-sm opacity-70">
-        Powered by automated workflows and real-time data analysis
-    </p>
+<footer class="pt-16 pb-12 sm:pt-24 sm:pb-16 border-t border-gray-800 mt-16">
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+        <div class="text-center sm:text-left">
+            <p class="text-sm opacity-70 mb-2">
+                © {new Date().getFullYear()} JP VED. All rights reserved.
+            </p>
+            <p class="text-xs opacity-60">
+                Powered by automated workflows and real-time data analysis
+            </p>
+        </div>
+
+        <nav class="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm">
+            <a href="/terms" class="opacity-70 hover:opacity-100 transition-opacity">
+                Terms of Service
+            </a>
+            <a href="/privacy" class="opacity-70 hover:opacity-100 transition-opacity">
+                Privacy Policy
+            </a>
+            <a href="/disclaimer" class="opacity-70 hover:opacity-100 transition-opacity">
+                Disclaimer
+            </a>
+        </nav>
+    </div>
+
+    <div class="mt-8 p-4 bg-yellow-500/5 border border-yellow-500/20 rounded-lg">
+        <p class="text-xs opacity-70 text-center">
+            <strong>Risk Warning:</strong> Trading and investing involves substantial risk of loss.
+            This website provides information for educational purposes only and does not constitute investment advice.
+        </p>
+    </div>
 </footer>
