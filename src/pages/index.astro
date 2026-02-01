@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Markdown from '../components/Markdown.astro';
+import TradeInsights from '../components/TradeInsights.tsx';
 
 const intro = `
-Hi, I’m **JPVED**.
+Hi, I'm **JPVED**.
 
 I help teams turn complex work into clear, executable outcomes — combining **business analysis, documentation, and automation** to improve how systems and operations run.
 
-**What you’ll get working with me**
+**What you'll get working with me**
 - Clear requirements + process maps
 - Strong documentation that stakeholders actually use
 - Practical automation and reporting improvements
@@ -15,7 +16,7 @@ I help teams turn complex work into clear, executable outcomes — combining **b
 `;
 
 const services = `
-### Services
+### IT Services
 - **Business & Systems Analysis** (requirements, user stories, process design)
 - **Billing / Data / Integrations** (workflows, reporting, operational improvements)
 - **Automation + AI enablement** (streamlined ops, smarter workflows)
@@ -24,12 +25,12 @@ const services = `
 
 const contact = `
 ### Contact
-Email: **you@jpved.com**  
+Email: **you@jpved.com**
 LinkedIn: **https://www.linkedin.com/in/YOUR-LINK/**
 
 If you send a message, include:
-- what you’re building
-- where you’re stuck
+- what you're building
+- where you're stuck
 - your target timeline
 `;
 ---
@@ -42,8 +43,9 @@ If you send a message, include:
     </p>
 
     <div class="mt-6 flex gap-3 flex-wrap">
+      <a href="#services" class="btn btn-lg sm:min-w-64">IT Services</a>
+      <a href="#trade-insights" class="btn btn-lg sm:min-w-64">Trade Insights</a>
       <a href="#contact" class="btn btn-lg sm:min-w-64">Contact</a>
-      <a href="#services" class="btn btn-lg sm:min-w-64">What I do</a>
     </div>
   </section>
 
@@ -53,15 +55,22 @@ If you send a message, include:
 
   <section id="services" class="mb-12">
     <Markdown content={services} class="text-lg" />
+    <div class="mt-6">
+      <h3 class="mb-3 text-xl font-semibold">Recent focus</h3>
+      <ul class="space-y-2">
+        <li>Modernizing legacy-to-new billing and statement workflows</li>
+        <li>Clarifying requirements across business + engineering stakeholders</li>
+        <li>Reducing manual work through automation and cleaner reporting</li>
+      </ul>
+    </div>
   </section>
 
-  <section class="mb-12">
-    <h2 class="mb-3">Recent focus</h2>
-    <ul>
-      <li>Modernizing legacy-to-new billing and statement workflows</li>
-      <li>Clarifying requirements across business + engineering stakeholders</li>
-      <li>Reducing manual work through automation and cleaner reporting</li>
-    </ul>
+  <section id="trade-insights" class="mb-12">
+    <h2 class="mb-6">Stock Trade Analysis Feed</h2>
+    <p class="mb-6 text-lg opacity-90">
+      Real-time trade insights powered by automated analysis workflow from Make.com.
+    </p>
+    <TradeInsights client:load />
   </section>
 
   <section id="contact" class="mb-12">
