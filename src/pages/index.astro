@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Markdown from '../components/Markdown.astro';
-import TradeInsights from '../components/TradeInsights.tsx';
 
 const intro = `
 I specialize in **data-driven insights, automation, and analytics** to help professionals make better investment decisions.
@@ -16,12 +15,15 @@ I specialize in **data-driven insights, automation, and analytics** to help prof
 
 <Layout title="JP VED | Trading Analytics & Insights">
   <section class="mb-16">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      JP VED
+    </h1>
     <p class="text-2xl font-light opacity-90 mb-3">
       Trading Analytics & Market Insights
     </p>
 
     <div class="mt-8 flex gap-3 flex-wrap">
-      <a href="#trade-insights" class="btn btn-lg sm:min-w-64 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 border-0">View Live Insights</a>
+      <a href="/trade-insights" class="btn btn-lg sm:min-w-64 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 border-0">View Live Insights</a>
       <a href="/charts" class="btn btn-lg sm:min-w-64">Browse Charts</a>
       <a href="/resources" class="btn btn-lg sm:min-w-64">Resources</a>
     </div>
@@ -31,11 +33,80 @@ I specialize in **data-driven insights, automation, and analytics** to help prof
     <Markdown content={intro} class="text-lg" />
   </section>
 
-  <section id="trade-insights" class="mb-16">
-    <h2 class="mb-6 text-3xl font-bold">Live Trade Insights</h2>
-    <p class="mb-8 text-lg opacity-90">
-      Real-time trade signals powered by automated analysis workflow. Get actionable insights on market movements and trading opportunities.
+  <section class="mb-16">
+    <h2 class="mb-6 text-3xl font-bold">Features</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="p-6 rounded-lg bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/30">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl">📊</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Live Trade Insights</h3>
+            <p class="opacity-80 mb-3">
+              Real-time trade signals powered by automated analysis workflows. Get actionable buy, sell, and hold recommendations as market conditions change.
+            </p>
+            <p class="text-sm opacity-60 italic">
+              Sign in required to view insights
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/30">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl">📈</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Technical Charts</h3>
+            <p class="opacity-80 mb-3">
+              Browse detailed technical analysis charts and market visualizations. View price action, support/resistance levels, and trend analysis.
+            </p>
+            <p class="text-sm opacity-60 italic">
+              Sign in required to view charts
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg bg-gray-800/40 border border-gray-700">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl">📚</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Educational Resources</h3>
+            <p class="opacity-80 mb-3">
+              Access guides, tutorials, and tools to improve your trading knowledge. Learn technical analysis, risk management, and trading strategies.
+            </p>
+            <p class="text-sm text-green-400">
+              Free access for everyone
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg bg-gray-800/40 border border-gray-700">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl">🤖</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Automated Workflows</h3>
+            <p class="opacity-80 mb-3">
+              Powered by Make.com integration for real-time market data processing and automated signal generation based on technical indicators.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-16 p-8 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-center">
+    <h2 class="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+    <p class="text-lg opacity-90 mb-6">
+      Create a free account to access live trade insights and technical charts.
     </p>
-    <TradeInsights client:load />
+    <div class="flex gap-3 justify-center flex-wrap">
+      <a href="/trade-insights" class="btn btn-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 border-0">
+        View Trade Insights
+      </a>
+      <a href="/charts" class="btn btn-lg">
+        Browse Charts
+      </a>
+    </div>
   </section>
 </Layout>
